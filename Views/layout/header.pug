@@ -1,0 +1,25 @@
+doctype
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    title #{title}
+    link(rel="stylesheet" href="/bootstrap/bootstrap.min.css")
+  body
+    nav.navbar.navbar-expand-lg.navbar-light.bg-primary
+      a.navbar-brand.text-light(href='#') Facebook Clone
+      button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+        span.navbar-toggler-icon
+
+      div.container
+       h5.ml-auto.justify-content-between
+        form.form-inline(method='POST' action='/login')
+           div.form-group
+             label(for='email').text-light Email: |
+             input.email.form-control(type='email' placeholder='name@email.com' name='email')
+           div.form-group|
+             label(for='pwd').text-light Password: |
+             input#pw.form-control(type='password' name='password')
+           span  
+             a.button.btn.btn-primary.login(type='submit') Sign in
+
+    block content

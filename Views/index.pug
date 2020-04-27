@@ -1,0 +1,44 @@
+extends ./layout/header.pug
+block content
+  main.container
+    .row
+      .col-md-6.col-md-offset-3.ml-auto
+        h1.display-4.m-b-2.text-center SignUp Here!
+        // register form
+        form(method='POST' action='/register').m-2
+          div.form-group
+            label(for='name') Name:
+            input#name.form-control(type='text' placeholder='first and last' name='name')
+          div.form-group
+            label(for='email') Email:
+            input#email.form-control(type='email' placeholder='name@email.com' name='email')
+          div.form-group
+            label(for='Phone') Phone:
+            input#favoriteBook.form-control(type='tel' placeholder='Phone' name='phone')
+          div.form-group
+            label(for='pw') Password:
+            input#pw.form-control(type='password' name='password')
+          div
+            label(for='gender') Gender:   
+          div.custom-control.custom-radio.custom-control-inline
+            input#customRadioInline1.custom-control-input( type='radio'  name='customRadioInline1')
+            label.custom-control-label(for='customRadioInline1') Male
+          div.custom-control.custom-radio.custom-control-inline
+            input#customRadioInline1.custom-control-input( type='radio'  name='customRadioInline1')
+            label.custom-control-label(for='customRadioInline1') Female
+          div.custom-control.custom-radio.custom-control-inline
+            input#customRadioInline1.custom-control-input( type='radio'  name='customRadioInline1')
+            label.custom-control-label(for='customRadioInline1') Custom  
+          //- div  
+          //-   button.btn.btn-primary(type='submit') Sign up
+
+          block content
+
+      div.container
+       div.col.fixed-bottom.bg-primary
+        footer.page-footer
+          div.footer-copyright.text-center.py-3.m-3
+          | &copy; 2020 Copyright:
+          a(href='https://mdbootstrap.com/')  MDBootstrap.com
+
+      block content
